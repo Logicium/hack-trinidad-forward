@@ -215,7 +215,7 @@ const isSubmitted = ref(false)
 // Configure Airtable using environment variables
 const AIRTABLE_API_KEY = import.meta.env.VITE_AIRTABLE_API_KEY
 const AIRTABLE_BASE_ID = import.meta.env.VITE_AIRTABLE_BASE_ID
-const AIRTABLE_TABLE_NAME = 'Hack Trinidad Forward Registrants'
+const AIRTABLE_TABLE_NAME = 'Hackathon'
 
 // Initialize Airtable
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID)
