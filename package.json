@@ -15,6 +15,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "airtable": "^0.12.2",
     "pinia": "^2.2.4",
     "three": "^0.168.0",
     "vue": "^3.5.12",
