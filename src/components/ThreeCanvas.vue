@@ -22,6 +22,38 @@ const mouse = { x: 0, y: 0 }
 const targetRotation = { x: 0, y: 0 }
 const currentRotation = { x: 0, y: 0 }
 
+// Gyroscope/device orientation tracking
+const deviceOrientation = { alpha: 0, beta: 0, gamma: 0 }
+const gyroTargetRotation = { x: 0, y: 0 }
+const isMobile = ref(false)
+const gyroPermissionGranted = ref(false)
+
+// Detect if device is mobile
+const detectMobile = () => {
+  // Check for specific mobile user agents, excluding Windows tablets/2-in-1s
+  const userAgent = navigator.userAgent.toLowerCase()
+  
+  // Exclude Windows devices (including Surface, 2-in-1s, etc.)
+  if (userAgent.includes('windows')) {
+    return false
+  }
+  
+  // Check for actual mobile devices
+  const mobilePatterns = [
+    /android/i,
+    /webos/i,
+    /iphone/i,
+    /ipad/i,
+    /ipod/i,
+    /blackberry/i,
+    /iemobile/i,
+    /opera mini/i,
+    /mobile/i
+  ]
+  
+  return mobilePatterns.some(pattern => pattern.test(userAgent))
+}
+
 // Linear interpolation function for smooth rotation
 const lerp = (start: number, end: number, factor: number) => {
   return start + (end - start) * factor
@@ -298,6 +330,9 @@ const processGeometryColors = (geometry: THREE.BufferGeometry) => {
 
 // Handle mouse movement for interactive rotation
 const handleMouseMove = (event: MouseEvent) => {
+  // Only use mouse on non-mobile devices
+  if (isMobile.value) return
+  
   // Normalize mouse position to -1 to 1 range
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
@@ -306,6 +341,103 @@ const handleMouseMove = (event: MouseEvent) => {
   // Mouse Y controls Z rotation for front-to-back tilt
   targetRotation.y = mouse.x * 0.3  // Keep X mouse controlling Y rotation (left-right)
   targetRotation.x = mouse.y * 0.2  // Mouse Y controls Z rotation via targetRotation.x
+}
+
+// Handle device orientation for mobile gyroscope
+const handleDeviceOrientation = (event: DeviceOrientationEvent) => {
+  if (!isMobile.value || !gyroPermissionGranted.value) return
+  
+  // Get orientation values
+  const alpha = event.alpha || 0  // Z axis (0-360)
+  const beta = event.beta || 0    // X axis (-180 to 180)
+  const gamma = event.gamma || 0  // Y axis (-90 to 90)
+  
+  // Store raw values
+  deviceOrientation.alpha = alpha
+  deviceOrientation.beta = beta
+  deviceOrientation.gamma = gamma
+  
+  // Convert to rotation values for the mountain
+  // Gamma (left-right tilt) controls Y rotation
+  // Beta (front-back tilt) controls Z rotation
+  
+  // Normalize gamma (-90 to 90) to rotation range
+  gyroTargetRotation.y = (gamma / 90) * 0.4  // Left-right rotation
+  
+  // Normalize beta, but offset to make neutral position feel natural
+  // Beta of 0-30 degrees should be the neutral zone
+  const adjustedBeta = beta - 15  // Offset so 15 degrees is neutral
+  gyroTargetRotation.x = Math.max(-0.3, Math.min(0.3, (adjustedBeta / 45) * 0.3))  // Front-back tilt
+  
+  console.log('Gyro data:', { alpha, beta, gamma, targetY: gyroTargetRotation.y, targetX: gyroTargetRotation.x })
+}
+
+// Request permission for device orientation on iOS 13+
+const requestGyroscopePermission = async () => {
+  if (!isMobile.value) return true
+  
+  try {
+    // Check if DeviceOrientationEvent.requestPermission exists (iOS 13+)
+    if (typeof (DeviceOrientationEvent as any).requestPermission === 'function') {
+      const permission = await (DeviceOrientationEvent as any).requestPermission()
+      if (permission === 'granted') {
+        gyroPermissionGranted.value = true
+        console.log('Gyroscope permission granted')
+        return true
+      } else {
+        console.log('Gyroscope permission denied')
+        return false
+      }
+    } else {
+      // For Android and older iOS, assume permission is granted
+      gyroPermissionGranted.value = true
+      console.log('Gyroscope available (no permission required)')
+      return true
+    }
+  } catch (error) {
+    console.error('Error requesting gyroscope permission:', error)
+    return false
+  }
+}
+
+// Initialize gyroscope if available
+const initGyroscope = async () => {
+  if (!isMobile.value) {
+    console.log('Not a mobile device, skipping gyroscope init')
+    return
+  }
+  
+  const hasPermission = await requestGyroscopePermission()
+  
+  if (hasPermission) {
+    window.addEventListener('deviceorientation', handleDeviceOrientation, true)
+    console.log('Gyroscope event listener added')
+    
+    // Show a brief instruction to mobile users
+    const instruction = document.createElement('div')
+    instruction.style.cssText = `
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(74, 222, 128, 0.9);
+      color: #0a0f0a;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      z-index: 1000;
+      pointer-events: none;
+      font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
+    `
+    instruction.textContent = 'Tilt your device to explore the mountain!'
+    document.body.appendChild(instruction)
+    
+    // Remove instruction after 4 seconds
+    setTimeout(() => {
+      document.body.removeChild(instruction)
+    }, 4000)
+  }
 }
 
 // Handle window resize
@@ -334,14 +466,22 @@ const animate = () => {
   animationId = requestAnimationFrame(animate)
 
   if (model) {
-    // Smooth rotation interpolation
-    currentRotation.x = lerp(currentRotation.x, targetRotation.x, 0.05)
-    currentRotation.y = lerp(currentRotation.y, targetRotation.y, 0.05)
+    // Choose rotation source based on device type
+    let activeTargetRotation = targetRotation
     
-    // Apply mouse rotations - mouse Y controls Z rotation for front-to-back tilt
+    if (isMobile.value && gyroPermissionGranted.value) {
+      // Use gyroscope data on mobile
+      activeTargetRotation = gyroTargetRotation
+    }
+    
+    // Smooth rotation interpolation
+    currentRotation.x = lerp(currentRotation.x, activeTargetRotation.x, 0.05)
+    currentRotation.y = lerp(currentRotation.y, activeTargetRotation.y, 0.05)
+    
+    // Apply rotations - gyroscope/mouse Y controls Z rotation for front-to-back tilt
     model.rotation.x = 0 // No X rotation
-    model.rotation.y = currentRotation.y // Mouse X controls Y rotation (left-right)
-    model.rotation.z = Math.PI / 8 + currentRotation.x // Base tilt + mouse Y controls Z rotation (front-to-back)
+    model.rotation.y = currentRotation.y // Gyroscope/mouse X controls Y rotation (left-right)
+    model.rotation.z = Math.PI / 8 + currentRotation.x // Base tilt + gyroscope/mouse Y controls Z rotation (front-to-back)
   }
 
   if (renderer && scene && camera) {
@@ -352,11 +492,21 @@ const animate = () => {
 // Component lifecycle
 onMounted(() => {
   console.log('ThreeCanvas component mounted')
+  
+  // Detect mobile device
+  isMobile.value = detectMobile()
+  console.log('Mobile device detected:', isMobile.value)
+  
   initThree()
   
   // Add event listeners
   window.addEventListener('mousemove', handleMouseMove)
   window.addEventListener('resize', handleResize)
+  
+  // Initialize gyroscope for mobile devices
+  if (isMobile.value) {
+    initGyroscope()
+  }
   
   console.log('Event listeners added')
 })
@@ -369,6 +519,11 @@ onUnmounted(() => {
   
   window.removeEventListener('mousemove', handleMouseMove)
   window.removeEventListener('resize', handleResize)
+  
+  // Remove gyroscope listener
+  if (isMobile.value) {
+    window.removeEventListener('deviceorientation', handleDeviceOrientation, true)
+  }
   
   if (renderer) {
     renderer.dispose()
