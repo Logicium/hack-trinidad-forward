@@ -5,7 +5,7 @@
       <div class="info-block">
         <h2>About</h2>
         <p>
-          Hack Trinidad Forward is a premier hackathon bringing together the brightest minds 
+          Hack Trinidad Forward is Trinidad's first hackathon bringing together the brightest minds
           in technology, innovation, and entrepreneurship. Over 48 hours, teams will collaborate 
           to build groundbreaking solutions that address real-world challenges facing Trinidad, Colorado 
           and the surrounding communities.
