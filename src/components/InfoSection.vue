@@ -12,7 +12,7 @@
         </p>
         <p>
           Whether you're a seasoned developer, a creative designer, an ambitious entrepreneur, 
-          or simply passionate about technology, this event offers the perfect platform to learn, 
+          or simply passionate about your community, this event offers the perfect platform to learn,
           network, and create something amazing in the heart of southern Colorado.
         </p>
       </div>
@@ -123,10 +123,10 @@
             <h3>Gold Sponsors</h3>
             <div class="sponsor-logos">
               <div class="sponsor-placeholder">
-                <span>Southern Colorado Dev Co.</span>
+                <span>Trinidad Chamber</span>
               </div>
               <div class="sponsor-placeholder">
-                <span>Trinidad Tech Solutions</span>
+                <span>Startup Colorado</span>
               </div>
               <div class="sponsor-placeholder">
                 <span>Front Range Digital</span>
@@ -138,16 +138,16 @@
             <h3>Community Partners</h3>
             <div class="sponsor-logos">
               <div class="sponsor-placeholder small">
-                <span>CodeCO</span>
+                <span>Emergent Campus</span>
               </div>
               <div class="sponsor-placeholder small">
-                <span>StartupTrinidad</span>
+                <span>Trinidad State College</span>
               </div>
               <div class="sponsor-placeholder small">
-                <span>Women in Tech CO</span>
+                <span>Apotome Labs</span>
               </div>
               <div class="sponsor-placeholder small">
-                <span>Colorado Dev Society</span>
+                <span>Girls Who Code</span>
               </div>
             </div>
           </div>
