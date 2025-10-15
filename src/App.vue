@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import HeroSection from './components/HeroSection.vue'
-import InfoSection from './components/InfoSection.vue'
+import { RouterView } from 'vue-router'
+import NavigationMenu from './components/NavigationMenu.vue'
 </script>
 
 <template>
   <div class="app">
-    <!-- Hero Section with 3D Model -->
-    <HeroSection />
-    
-    <!-- Information Section -->
-    <InfoSection />
+    <NavigationMenu />
+    <RouterView />
   </div>
 </template>
 
@@ -25,7 +22,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 body {
@@ -38,13 +35,12 @@ body {
 
 #app {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Custom scrollbar with green theme */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -62,7 +58,6 @@ body {
   background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
 }
 
-/* For Firefox */
 html {
   scrollbar-width: thin;
   scrollbar-color: #4ade80 #1a1f1a;

@@ -1,11 +1,9 @@
 <template>
   <section class="hero-section">
-    <!-- 3D Mountain Section (Top Half) -->
     <div class="mountain-section">
       <ThreeCanvas />
     </div>
-    
-    <!-- Text Content Section (Bottom Half?) -->
+
     <div class="content-section">
       <div class="hero-content">
         <div class="hero-text">
@@ -15,40 +13,17 @@
             Join innovators, developers, and creators for an epic 48-hour problem-solving event,
             in the beautiful city of Trinidad, Colorado.
           </p>
-          <button 
-            @click="openRegistration" 
-            class="register-button"
-          >
+          <router-link to="/register" class="register-button">
             Register Now
-          </button>
+          </router-link>
         </div>
       </div>
     </div>
-
-    <!-- Registration Modal -->
-    <RegistrationForm 
-      v-if="isFormVisible" 
-      @close="closeRegistration"
-    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
 import ThreeCanvas from './ThreeCanvas.vue'
-import RegistrationForm from './RegistrationForm.vue'
-
-// State management for registration modal
-const isFormVisible = ref(false)
-
-// Methods to control modal visibility
-const openRegistration = () => {
-  isFormVisible.value = true
-}
-
-const closeRegistration = () => {
-  isFormVisible.value = false
-}
 </script>
 
 <style scoped>
@@ -126,6 +101,7 @@ const closeRegistration = () => {
 }
 
 .register-button {
+  display: inline-block;
   background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
   color: #0a0f0a;
   border: none;
@@ -140,6 +116,7 @@ const closeRegistration = () => {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .register-button::before {
@@ -171,34 +148,32 @@ const closeRegistration = () => {
   .mountain-section {
     height: 45vh;
   }
-  
+
   .content-section {
     height: 55vh;
     padding: 1rem;
-    box-sizing: border-box;
   }
-  
+
   .hero-content {
     margin: 0 0.5rem;
-    box-sizing: border-box;
     max-width: calc(100% - 1rem);
   }
-  
+
   .hero-title {
     font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 0.5rem;
   }
-  
+
   .hero-subtitle {
     margin-bottom: 1rem;
     font-size: clamp(1rem, 4vw, 1.5rem);
   }
-  
+
   .hero-description {
     margin-bottom: 1.5rem;
     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   }
-  
+
   .register-button {
     padding: 0.9rem 2rem;
     font-size: 0.9rem;

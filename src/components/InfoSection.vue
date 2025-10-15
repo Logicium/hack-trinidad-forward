@@ -154,7 +154,7 @@
         </div>
 
         <div class="sponsor-cta">
-          <p>Interested in sponsoring? <a href="mailto:sponsors@hacktrinidadforward.com">Contact us</a></p>
+          <p>Interested in sponsoring? <a href="mailto:kisora@apotomelabs.com">Contact us</a></p>
         </div>
       </div>
     </div>
