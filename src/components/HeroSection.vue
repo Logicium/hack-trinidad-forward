@@ -8,7 +8,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">Hack Trinidad Forward</h1>
-          <p class="hero-subtitle">November 15th - 17th</p>
+          <p class="hero-subtitle">November 14th - 16th</p>
           <p class="hero-description">
             Join innovators, developers, and creators for an epic 48-hour problem-solving event,
             in the beautiful city of Trinidad, Colorado.

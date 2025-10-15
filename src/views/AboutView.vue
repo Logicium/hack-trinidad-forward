@@ -145,6 +145,99 @@
       </div>
     </section>
 
+    <section class="prizes-section">
+      <div class="container">
+        <h2 class="section-title">Prizes & Recognition</h2>
+        <p class="prizes-disclaimer">
+          Prize details are being finalized. Stay tuned for updates!
+        </p>
+
+        <div class="prizes-grid">
+          <!-- 1st Place -->
+          <div class="prize-card first-place">
+            <div class="prize-rank">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15L8.5 17.5L9.5 13.5L6 10.5L10 10L12 6L14 10L18 10.5L14.5 13.5L15.5 17.5L12 15Z" fill="#FFD700" stroke="#FFD700" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span>1st Place</span>
+            </div>
+            <div class="prize-amount">TBD</div>
+            <p class="prize-description">
+              Grand prize winner receives cash award, premium swag, and special recognition
+            </p>
+          </div>
+
+          <!-- 2nd Place -->
+          <div class="prize-card second-place">
+            <div class="prize-rank">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15L8.5 17.5L9.5 13.5L6 10.5L10 10L12 6L14 10L18 10.5L14.5 13.5L15.5 17.5L12 15Z" fill="#C0C0C0" stroke="#C0C0C0" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span>2nd Place</span>
+            </div>
+            <div class="prize-amount">TBD</div>
+            <p class="prize-description">
+              Runner-up receives cash award and premium swag package
+            </p>
+          </div>
+
+          <!-- 3rd Place -->
+          <div class="prize-card third-place">
+            <div class="prize-rank">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 15L8.5 17.5L9.5 13.5L6 10.5L10 10L12 6L14 10L18 10.5L14.5 13.5L15.5 17.5L12 15Z" fill="#CD7F32" stroke="#CD7F32" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <span>3rd Place</span>
+            </div>
+            <div class="prize-amount">TBD</div>
+            <p class="prize-description">
+              Third place receives cash award and swag
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Prizes -->
+        <div class="category-prizes">
+          <h3 class="category-prizes-title">Category Awards</h3>
+          <div class="category-prizes-grid">
+            <div class="category-prize-card">
+              <div class="category-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Best Design</h4>
+              <p>Most visually appealing and user-friendly interface</p>
+            </div>
+
+            <div class="category-prize-card">
+              <div class="category-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Best Civic Impact</h4>
+              <p>Project with greatest potential community benefit</p>
+            </div>
+
+            <div class="category-prize-card">
+              <div class="category-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Most Creative</h4>
+              <p>Most innovative and original solution</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="all-participants-note">
+          <p>All participants receive exclusive Hack Trinidad Forward swag and certificates of participation!</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Organizers & Judges Section -->
     <section class="people-section">
       <div class="container">
@@ -744,6 +837,260 @@ onUnmounted(() => {
   .person-photo {
     width: 120px;
     height: 120px;
+  }
+}
+
+.prizes-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  background: linear-gradient(135deg, rgba(10, 15, 10, 0.5) 0%, rgba(26, 31, 26, 0.3) 100%);
+}
+
+.prizes-disclaimer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #86efac;
+  font-style: italic;
+  margin-bottom: 3rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(74, 222, 128, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+
+.prize-card {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(34, 197, 94, 0.03) 100%);
+  border: 2px solid rgba(74, 222, 128, 0.2);
+  border-radius: 4px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.prize-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(74, 222, 128, 0.4);
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.08) 0%, rgba(34, 197, 94, 0.05) 100%);
+}
+
+.prize-card.first-place {
+  border-color: rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.08) 0%, rgba(255, 215, 0, 0.03) 100%);
+}
+
+.prize-card.first-place:hover {
+  border-color: rgba(255, 215, 0, 0.6);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12) 0%, rgba(255, 215, 0, 0.05) 100%);
+}
+
+.prize-card.second-place {
+  border-color: rgba(192, 192, 192, 0.4);
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.08) 0%, rgba(192, 192, 192, 0.03) 100%);
+}
+
+.prize-card.second-place:hover {
+  border-color: rgba(192, 192, 192, 0.6);
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.12) 0%, rgba(192, 192, 192, 0.05) 100%);
+}
+
+.prize-card.third-place {
+  border-color: rgba(205, 127, 50, 0.4);
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.08) 0%, rgba(205, 127, 50, 0.03) 100%);
+}
+
+.prize-card.third-place:hover {
+  border-color: rgba(205, 127, 50, 0.6);
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.12) 0%, rgba(205, 127, 50, 0.05) 100%);
+}
+
+.prize-rank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.prize-rank span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #f5f7f5;
+  letter-spacing: -0.01em;
+}
+
+.prize-amount {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #4ade80;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.first-place .prize-amount {
+  color: #FFD700;
+  font-size: 3rem;
+}
+
+.second-place .prize-amount {
+  color: #C0C0C0;
+  font-size: 2.75rem;
+}
+
+.third-place .prize-amount {
+  color: #CD7F32;
+}
+
+.prize-description {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.category-prizes {
+  margin-top: 4rem;
+}
+
+.category-prizes-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #86efac;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.category-prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.category-prize-card {
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.03) 0%, rgba(34, 197, 94, 0.02) 100%);
+  border: 1px solid rgba(74, 222, 128, 0.15);
+  border-radius: 4px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.category-prize-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(74, 222, 128, 0.3);
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(34, 197, 94, 0.03) 100%);
+}
+
+.category-icon {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.category-prize-card h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f5f7f5;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.category-prize-card p {
+  color: #a3a3a3;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.all-participants-note {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.08) 0%, rgba(34, 197, 94, 0.05) 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+}
+
+.all-participants-note p {
+  color: #d1d5db;
+  font-size: 1.05rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .prizes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .prize-card.first-place .prize-amount {
+    font-size: 2.5rem;
+  }
+
+  .prize-card.second-place .prize-amount {
+    font-size: 2.25rem;
+  }
+
+  .category-prizes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .prizes-section {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .prizes-disclaimer {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .prize-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .prize-rank span {
+    font-size: 1.1rem;
+  }
+
+  .prize-amount {
+    font-size: 2rem;
+  }
+
+  .prize-card.first-place .prize-amount {
+    font-size: 2.25rem;
+  }
+
+  .prize-card.second-place .prize-amount {
+    font-size: 2.1rem;
+  }
+
+  .category-prize-card {
+    padding: 1.5rem 1rem;
   }
 }
 </style>

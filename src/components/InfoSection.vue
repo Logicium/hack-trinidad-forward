@@ -29,15 +29,15 @@
                 <span class="event">Registration & Welcome Reception</span>
               </div>
               <div class="schedule-item">
-                <span class="time">7:30 PM</span>
-                <span class="event">Opening Ceremony & Theme Reveal</span>
+                <span class="time">7:00 PM</span>
+                <span class="event">Opening Ceremony & Keynote Speaker</span>
               </div>
               <div class="schedule-item">
-                <span class="time">8:30 PM</span>
+                <span class="time">8:00 PM</span>
                 <span class="event">Team Formation & Networking</span>
               </div>
               <div class="schedule-item">
-                <span class="time">10:00 PM</span>
+                <span class="time">9:00 PM</span>
                 <span class="event">Hacking Begins!</span>
               </div>
             </div>
@@ -52,7 +52,7 @@
               </div>
               <div class="schedule-item">
                 <span class="time">10:00 AM</span>
-                <span class="event">Workshop: API Development</span>
+                <span class="event">Workshop: AI Powered Development</span>
               </div>
               <div class="schedule-item">
                 <span class="time">12:00 PM</span>
@@ -77,19 +77,19 @@
                 <span class="event">Final Day Breakfast</span>
               </div>
               <div class="schedule-item">
-                <span class="time">12:00 PM</span>
+                <span class="time">11:00 AM</span>
                 <span class="event">Project Submissions Due</span>
               </div>
               <div class="schedule-item">
-                <span class="time">1:00 PM</span>
+                <span class="time">12:00 PM</span>
                 <span class="event">Lunch & Demo Prep</span>
               </div>
               <div class="schedule-item">
-                <span class="time">2:30 PM</span>
-                <span class="event">Final Presentations</span>
+                <span class="time">1:00 PM</span>
+                <span class="event">Presentations & Judging</span>
               </div>
               <div class="schedule-item">
-                <span class="time">5:00 PM</span>
+                <span class="time">2:30 PM</span>
                 <span class="event">Awards Ceremony & Closing</span>
               </div>
             </div>
