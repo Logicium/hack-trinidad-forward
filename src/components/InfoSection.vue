@@ -6,12 +6,12 @@
         <h2>About</h2>
         <p>
           Hack Trinidad Forward is Trinidad's first hackathon bringing together the brightest minds
-          in technology, innovation, and entrepreneurship. Over 48 hours, teams will collaborate 
-          to build groundbreaking solutions that address real-world challenges facing Trinidad, Colorado 
+          in technology, innovation, and entrepreneurship. Over 48 hours, teams will collaborate
+          to build groundbreaking solutions that address real-world challenges facing Trinidad, Colorado
           and the surrounding communities.
         </p>
         <p>
-          Whether you're a seasoned developer, a creative designer, an ambitious entrepreneur, 
+          Whether you're a seasoned developer, a creative designer, an ambitious entrepreneur,
           or simply passionate about your community, this event offers the perfect platform to learn,
           network, and create something amazing in the heart of southern Colorado.
         </p>
@@ -29,15 +29,15 @@
                 <span class="event">Registration & Welcome Reception</span>
               </div>
               <div class="schedule-item">
-                <span class="time">7:00 PM</span>
-                <span class="event">Opening Ceremony & Keynote Speaker</span>
+                <span class="time">7:30 PM</span>
+                <span class="event">Opening Ceremony & Theme Reveal</span>
               </div>
               <div class="schedule-item">
-                <span class="time">8:00 PM</span>
+                <span class="time">8:30 PM</span>
                 <span class="event">Team Formation & Networking</span>
               </div>
               <div class="schedule-item">
-                <span class="time">9:00 PM</span>
+                <span class="time">10:00 PM</span>
                 <span class="event">Hacking Begins!</span>
               </div>
             </div>
@@ -52,7 +52,7 @@
               </div>
               <div class="schedule-item">
                 <span class="time">10:00 AM</span>
-                <span class="event">Workshop: AI Powered Development</span>
+                <span class="event">Workshop: API Development</span>
               </div>
               <div class="schedule-item">
                 <span class="time">12:00 PM</span>
@@ -77,19 +77,19 @@
                 <span class="event">Final Day Breakfast</span>
               </div>
               <div class="schedule-item">
-                <span class="time">11:00 AM</span>
+                <span class="time">12:00 PM</span>
                 <span class="event">Project Submissions Due</span>
               </div>
               <div class="schedule-item">
-                <span class="time">12:00 PM</span>
+                <span class="time">1:00 PM</span>
                 <span class="event">Lunch & Demo Prep</span>
               </div>
               <div class="schedule-item">
-                <span class="time">1:00 PM</span>
-                <span class="event">Presentations & Judging</span>
+                <span class="time">2:30 PM</span>
+                <span class="event">Final Presentations</span>
               </div>
               <div class="schedule-item">
-                <span class="time">2:30 PM</span>
+                <span class="time">5:00 PM</span>
                 <span class="event">Awards Ceremony & Closing</span>
               </div>
             </div>
@@ -97,15 +97,37 @@
         </div>
       </div>
 
+      <!-- Location Section -->
+      <div class="info-block">
+        <h2>Location</h2>
+        <p>
+          Join us at Emergent Campus Trinidad, a collaborative workspace and community hub
+          located next to Trinidad State College Campus.
+        </p>
+        <div class="location-details">
+          <div class="address">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 5.02944 7.02944 1 12 1C16.9706 1 21 5.02944 21 10Z" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="10" r="3" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <strong>Emergent Campus Trinidad</strong>
+              <p>612 Park Street, Trinidad, CO 81082</p>
+            </div>
+          </div>
+        </div>
+        <GoogleMap />
+      </div>
+
       <!-- Sponsors Section -->
       <div class="info-block">
         <h2>Sponsors</h2>
         <p>
-          We're grateful for the support of our amazing sponsors who make this event possible. 
-          Their commitment to innovation and technology development in southern Colorado helps create 
+          We're grateful for the support of our amazing sponsors who make this event possible.
+          Their commitment to innovation and technology development in southern Colorado helps create
           opportunities for the next generation of tech leaders.
         </p>
-        
+
         <div class="sponsors-grid">
           <div class="sponsor-tier">
             <h3>Title Sponsors</h3>
@@ -162,7 +184,7 @@
 </template>
 
 <script setup lang="ts">
-// This component is purely presentational, no script logic needed
+import GoogleMap from './GoogleMap.vue'
 </script>
 
 <style scoped>
@@ -279,6 +301,43 @@
   font-weight: 300;
 }
 
+/* Location Styles */
+.location-details {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.address {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(34, 197, 94, 0.03) 100%);
+  border-radius: 4px;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.address svg {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.address strong {
+  display: block;
+  color: #4ade80;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.address p {
+  color: #d1d5db;
+  font-size: 1rem;
+  margin: 0;
+  text-align: left;
+}
+
 /* Sponsors Styles */
 .sponsors-grid {
   margin-top: 4rem;
@@ -362,50 +421,63 @@
   .container {
     padding: 0 1rem;
   }
-  
+
   .info-section {
     padding: 4rem 0;
   }
-  
+
   .info-block {
     margin-bottom: 4rem;
   }
-  
+
   .info-block h2 {
     font-size: clamp(2rem, 6vw, 3rem);
   }
-  
+
   .schedule-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .schedule-day {
     padding: 2rem;
   }
-  
+
   .schedule-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
   }
-  
+
   .schedule-item .event {
     text-align: left;
     margin-left: 0;
   }
-  
+
+  .address {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .address p {
+    text-align: center;
+  }
+
+  .map-container iframe {
+    height: 350px;
+  }
+
   .sponsor-logos {
     gap: 1rem;
   }
-  
+
   .sponsor-placeholder {
     min-width: 140px;
     height: 80px;
     padding: 1rem;
     font-size: 0.9rem;
   }
-  
+
   .sponsor-placeholder.small {
     min-width: 120px;
     height: 60px;
