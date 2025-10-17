@@ -120,6 +120,27 @@
           </span>
         </div>
 
+        <!-- Dietary Preferences -->
+        <div class="form-group">
+          <label>Dietary Preferences (optional)</label>
+          <div class="checkbox-group">
+            <label
+                v-for="option in dietaryOptions"
+                :key="option"
+                class="checkbox-label"
+            >
+              <input
+                  type="checkbox"
+                  :value="option"
+                  v-model="formData.dietaryPreferences"
+                  class="checkbox"
+                  :disabled="isSubmitting"
+              />
+              <span class="checkbox-text">{{ option }}</span>
+            </label>
+          </div>
+        </div>
+
         <!-- Help Find Team -->
         <div class="form-group">
           <label class="checkbox-label">
@@ -188,6 +209,7 @@ interface RegistrationForm {
   email: string
   profession: string
   experienceLevel: string
+  dietaryPreferences: string[]
   helpFindTeam: boolean
 }
 
@@ -197,8 +219,19 @@ const formData = reactive<RegistrationForm>({
   email: '',
   profession: '',
   experienceLevel: '',
+  dietaryPreferences: [],
   helpFindTeam: false
 })
+
+const dietaryOptions = [
+  'No Preferences',
+  'Vegetarian',
+  'Vegan',
+  'Gluten Free',
+  'Dairy Free',
+  'Nut Allergy',
+  'Other'
+]
 
 const isSubmitting = ref(false)
 const isSubmitted = ref(false)
@@ -281,6 +314,9 @@ const handleSubmit = async () => {
   isSubmitting.value = true
 
   try {
+    // Convert dietary preferences array to Airtable multiple select format
+    const dietaryPreferencesFormatted = formData.dietaryPreferences.map(pref => ({ name: pref }))
+
     await base(AIRTABLE_TABLE_NAME).create([
       {
         fields: {
@@ -289,6 +325,7 @@ const handleSubmit = async () => {
           'Email': formData.email,
           'Profession': formData.profession,
           'Experience Level': formData.experienceLevel,
+          'Dietary Preferences': formData.dietaryPreferences,
           'Help Find Team': formData.helpFindTeam,
           'Registration Date': new Date().toISOString()
         }
@@ -429,6 +466,16 @@ const handleSubmit = async () => {
   font-weight: 300;
 }
 
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgba(26, 31, 26, 0.3);
+  border-radius: 2px;
+  border: 1px solid rgba(74, 222, 128, 0.1);
+}
+
 .checkbox-label {
   display: flex;
   align-items: center;
@@ -446,6 +493,7 @@ const handleSubmit = async () => {
   background-color: rgba(26, 31, 26, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .checkbox:checked {
