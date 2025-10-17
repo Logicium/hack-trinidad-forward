@@ -10,7 +10,7 @@ import { ref, onMounted } from 'vue'
 const mapContainer = ref<HTMLElement>()
 
 // Get API key from environment variable
-const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || 'AIzaSyDN_20CLj-TUTeQHE0yTvWPNMVtxiXktfY'
+const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ''
 
 const mapStyles: google.maps.MapTypeStyle[] = [
   // Base geometry - dark background
