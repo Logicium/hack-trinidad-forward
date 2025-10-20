@@ -42,7 +42,7 @@
           <div class="tier-card gold">
             <div class="tier-header">
               <h3>Gold</h3>
-              <p class="tier-amount">$2,500+</p>
+              <p class="tier-amount">$1000+</p>
             </div>
             <ul class="tier-benefits">
               <li>Prime logo placement on all materials</li>
@@ -57,7 +57,7 @@
           <div class="tier-card silver">
             <div class="tier-header">
               <h3>Silver</h3>
-              <p class="tier-amount">$1,000+</p>
+              <p class="tier-amount">$500+</p>
             </div>
             <ul class="tier-benefits">
               <li>Logo on website and materials</li>
@@ -71,7 +71,7 @@
           <div class="tier-card bronze">
             <div class="tier-header">
               <h3>Bronze</h3>
-              <p class="tier-amount">$500+</p>
+              <p class="tier-amount">$100+</p>
             </div>
             <ul class="tier-benefits">
               <li>Name on website</li>

@@ -169,7 +169,7 @@
                 <span>Apotome Labs</span>
               </div>
               <div class="sponsor-placeholder small">
-                <span>Girls Who Code</span>
+                <span>InBank</span>
               </div>
             </div>
           </div>
