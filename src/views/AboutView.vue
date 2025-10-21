@@ -329,7 +329,25 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-
+import { useHead } from '@vueuse/head'
+useHead({
+  title: 'About Hack Trinidad Forward | Nov 14-16',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn all about Hack Trinidad Forward (Nov 14-16). Find out about the mission, organizers, and event details for our 48-hour hackathon in Trinidad, Colorado.'
+    },
+    // --- Social Media Tags ---
+    {
+      property: 'og:title',
+      content: 'About Hack Trinidad Forward | Nov 14-16'
+    },
+    {
+      property: 'og:description',
+      content: 'Find out all about the Hack Trinidad Forward event, its mission, and organizers.'
+    }
+  ]
+})
 const questions = [
   "How can we help local businesses sell more products online?",
   "What if you could see all available parking spots downtown in real-time?",

@@ -202,7 +202,25 @@
 <script setup lang="ts">
 import { ref, computed, reactive } from 'vue'
 import Airtable from 'airtable'
-
+import { useHead } from '@vueuse/head'
+useHead({
+  title: 'Register Now for Hack Trinidad Forward | Nov 14-16',
+  meta: [
+    {
+      name: 'description',
+      content: 'Register now to secure your spot at Hack Trinidad Forward! Join innovators and creators from Nov 14-16 in Trinidad, CO, for an epic 48-hour problem-solving event.'
+    },
+    // --- Social Media Tags ---
+    {
+      property: 'og:title',
+      content: 'Register Now for Hack Trinidad Forward'
+    },
+    {
+      property: 'og:description',
+      content: 'Register now to secure your spot at Hack Trinidad Forward! Join us Nov 14-16 in Trinidad, CO.'
+    }
+  ]
+})
 interface RegistrationForm {
   firstName: string
   lastName: string
