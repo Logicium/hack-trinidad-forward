@@ -269,7 +269,7 @@
                 <span class="tba">Photo Coming Soon</span>
               </div>
               <h4>Michael Archuleta</h4>
-              <p class="person-role">Biomedica, Creo En Ti, CIO Mt. San Rafael Hospital</p>
+              <p class="person-role">Creo En Ti Foundation, CIO Mt. San Rafael Hospital</p>
             </div>
 
             <div class="person-card">
@@ -286,6 +286,14 @@
               </div>
               <h4>Veronica Maes</h4>
               <p class="person-role">Communications and Community Relations Coordinator, City of Trinidad</p>
+            </div>
+
+            <div class="person-card">
+              <div class="person-photo square">
+                <span class="tba">Photo Coming Soon</span>
+              </div>
+              <h4>Ryan Dornan</h4>
+              <p class="person-role">Educational Technology Specialist, Trinidad School District</p>
             </div>
           </div>
         </div>

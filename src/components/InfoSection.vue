@@ -141,14 +141,14 @@
           <div class="sponsor-tier">
             <h3>Innovation Partners</h3>
             <div class="sponsor-logos">
-              <div class="sponsor-placeholder medium">
-                <span>Biomedica</span>
+              <div class="sponsor-logo-container medium">
+                <img src="/logos/Biometrica+Logo.webp" alt="Biomedica" class="sponsor-logo" />
               </div>
               <div class="sponsor-logo-container medium">
                 <img src="/logos/csi-logo.png" alt="CSI" class="sponsor-logo" />
               </div>
               <div class="sponsor-logo-container medium">
-                <img src="/logos/creo-en-ti-logo.jpeg" alt="Creo En Ti" class="sponsor-logo" />
+                <img src="/logos/creo-en-ti-logo.jpeg" alt="Creo En Ti" class="sponsor-logo sponsor-logo-zoom-sm" />
               </div>
             </div>
           </div>
@@ -380,8 +380,8 @@ import GoogleMap from './GoogleMap.vue'
 }
 
 .sponsor-logo-container {
-  background: #d1fae5;
-  border: 1px solid rgba(74, 222, 128, 0.2);
+  background: #ffffff;
+  border: 2px solid #4ade80;
   border-radius: 2px;
   padding: 2rem;
   min-width: 240px;
@@ -418,10 +418,10 @@ import GoogleMap from './GoogleMap.vue'
 }
 
 .sponsor-logo-container:hover {
-  border-color: #4ade80;
-  background: #a7f3d0;
+  border-color: #22c55e;
+  background: #f0fdf4;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.3);
 }
 
 .sponsor-logo {
@@ -433,10 +433,13 @@ import GoogleMap from './GoogleMap.vue'
 .sponsor-logo-zoom {
   transform: scale(2.5);
 }
+.sponsor-logo-zoom-sm {
+  transform: scale(1.2);
+}
 
 .sponsor-placeholder {
-  background: #d1fae5;
-  border: 1px solid rgba(74, 222, 128, 0.15);
+  background: #ffffff;
+  border: 2px solid #4ade80;
   border-radius: 2px;
   padding: 2rem;
   min-width: 240px;
@@ -445,7 +448,7 @@ import GoogleMap from './GoogleMap.vue'
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  color: #065f46;
+  color: #6b7280;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   letter-spacing: -0.01em;
@@ -481,9 +484,9 @@ import GoogleMap from './GoogleMap.vue'
 }
 
 .sponsor-placeholder:hover {
-  border-color: #4ade80;
-  background: #a7f3d0;
-  color: #064e3b;
+  border-color: #22c55e;
+  background: #f0fdf4;
+  color: #4b5563;
   transform: translateY(-1px);
 }
 
