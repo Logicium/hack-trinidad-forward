@@ -39,9 +39,34 @@
         <p class="section-subtitle">Partner with us to support innovation in Trinidad</p>
 
         <div class="tiers-grid">
-          <div class="tier-card gold">
+          <div class="tier-card catalyst">
             <div class="tier-header">
-              <h3>Gold</h3>
+              <h3>Launch Partners</h3>
+              <p class="tier-amount">$100+</p>
+            </div>
+            <ul class="tier-benefits">
+              <li>Name on website and materials</li>
+              <li>Social media thank you</li>
+              <li>Community recognition</li>
+            </ul>
+          </div>
+
+          <div class="tier-card pioneer">
+            <div class="tier-header">
+              <h3>Innovation Partners</h3>
+              <p class="tier-amount">$500+</p>
+            </div>
+            <ul class="tier-benefits">
+              <li>Logo on website and materials</li>
+              <li>Booth space</li>
+              <li>Social media mentions</li>
+              <li>Access to participant résumés</li>
+            </ul>
+          </div>
+
+          <div class="tier-card keystone">
+            <div class="tier-header">
+              <h3>Keystone Partners</h3>
               <p class="tier-amount">$1000+</p>
             </div>
             <ul class="tier-benefits">
@@ -49,35 +74,7 @@
               <li>Speaking opportunity at opening ceremony</li>
               <li>Booth space for recruiting/networking</li>
               <li>Social media feature series</li>
-              <li>5 complimentary tickets</li>
               <li>Access to participant résumés</li>
-            </ul>
-          </div>
-
-          <div class="tier-card silver">
-            <div class="tier-header">
-              <h3>Silver</h3>
-              <p class="tier-amount">$500+</p>
-            </div>
-            <ul class="tier-benefits">
-              <li>Logo on website and materials</li>
-              <li>Booth space</li>
-              <li>Social media mentions</li>
-              <li>3 complimentary tickets</li>
-              <li>Access to participant résumés</li>
-            </ul>
-          </div>
-
-          <div class="tier-card bronze">
-            <div class="tier-header">
-              <h3>Bronze</h3>
-              <p class="tier-amount">$100+</p>
-            </div>
-            <ul class="tier-benefits">
-              <li>Name on website</li>
-              <li>Social media thank you</li>
-              <li>2 complimentary tickets</li>
-              <li>Community recognition</li>
             </ul>
           </div>
         </div>
@@ -161,7 +158,7 @@
               </svg>
               <span>1st Place</span>
             </div>
-            <div class="prize-amount">TBD</div>
+            <div class="prize-amount">$500</div>
             <p class="prize-description">
               Grand prize winner receives cash award, premium swag, and special recognition
             </p>
@@ -175,7 +172,7 @@
               </svg>
               <span>2nd Place</span>
             </div>
-            <div class="prize-amount">TBD</div>
+            <div class="prize-amount">$250</div>
             <p class="prize-description">
               Runner-up receives cash award and premium swag package
             </p>
@@ -189,7 +186,7 @@
               </svg>
               <span>3rd Place</span>
             </div>
-            <div class="prize-amount">TBD</div>
+            <div class="prize-amount">$150</div>
             <p class="prize-description">
               Third place receives cash award and swag
             </p>
@@ -244,34 +241,14 @@
         <h2 class="section-title">Meet the Team</h2>
 
         <div class="people-category">
-          <h3 class="category-title">Organizers</h3>
+          <h3 class="category-title">Event Organizer</h3>
           <div class="people-grid">
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">TBA</span>
+                <span class="tba">Photo Coming Soon</span>
               </div>
-              <h4>Event Director</h4>
-            </div>
-
-            <div class="person-card">
-              <div class="person-photo square">
-                <span class="tba">TBA</span>
-              </div>
-              <h4>Technical Lead</h4>
-            </div>
-
-            <div class="person-card">
-              <div class="person-photo square">
-                <span class="tba">TBA</span>
-              </div>
-              <h4>Operations Manager</h4>
-            </div>
-
-            <div class="person-card">
-              <div class="person-photo square">
-                <span class="tba">TBA</span>
-              </div>
-              <h4>Community Liaison</h4>
+              <h4>Kisora Thomas</h4>
+              <p class="person-role">Event Manager, Owner at Apotome Labs</p>
             </div>
           </div>
         </div>
@@ -281,44 +258,34 @@
           <div class="people-grid">
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">TBA</span>
+                <span class="tba">Photo Coming Soon</span>
               </div>
-              <h4>Industry Expert</h4>
+              <h4>Christine Louden</h4>
+              <p class="person-role">Director of Emergent Campus</p>
             </div>
 
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">TBA</span>
+                <span class="tba">Photo Coming Soon</span>
               </div>
-              <h4>Community Leader</h4>
+              <h4>Michael Archuleta</h4>
+              <p class="person-role">Biomedica, Creo En Ti, CIO Mt. San Rafael Hospital</p>
             </div>
 
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">TBA</span>
+                <span class="tba">Photo Coming Soon</span>
               </div>
-              <h4>Tech Innovator</h4>
+              <h4>Jenn Green</h4>
+              <p class="person-role">Director of Trinidad Trails Alliance</p>
             </div>
 
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">TBA</span>
+                <span class="tba">Photo Coming Soon</span>
               </div>
-              <h4>Local Business Owner</h4>
-            </div>
-
-            <div class="person-card">
-              <div class="person-photo square">
-                <span class="tba">TBA</span>
-              </div>
-              <h4>Education Specialist</h4>
-            </div>
-
-            <div class="person-card">
-              <div class="person-photo square">
-                <span class="tba">TBA</span>
-              </div>
-              <h4>Design Professional</h4>
+              <h4>Veronica Maes</h4>
+              <p class="person-role">Communications and Community Relations Coordinator, City of Trinidad</p>
             </div>
           </div>
         </div>
@@ -807,6 +774,15 @@ onUnmounted(() => {
   font-size: 1rem;
   font-weight: 400;
   color: #d1d5db;
+  margin-bottom: 0.25rem;
+}
+
+.person-role {
+  font-size: 0.85rem;
+  color: #a3a3a3;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 0;
 }
 
 @media (max-width: 1024px) {

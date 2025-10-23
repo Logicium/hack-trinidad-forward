@@ -22,7 +22,7 @@
         <h2>Schedule</h2>
         <div class="schedule-grid">
           <div class="schedule-day">
-            <h3>Friday, Nov 15th</h3>
+            <h3>Friday, Nov 14th</h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">6:00 PM</span>
@@ -44,7 +44,7 @@
           </div>
 
           <div class="schedule-day">
-            <h3>Saturday, Nov 16th</h3>
+            <h3>Saturday, Nov 15th</h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">8:00 AM</span>
@@ -70,7 +70,7 @@
           </div>
 
           <div class="schedule-day">
-            <h3>Sunday, Nov 17th</h3>
+            <h3>Sunday, Nov 16th</h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">8:00 AM</span>
@@ -130,46 +130,53 @@
 
         <div class="sponsors-grid">
           <div class="sponsor-tier">
-            <h3>Title Sponsors</h3>
+            <h3>Keystone Partners</h3>
             <div class="sponsor-logos">
-              <div class="sponsor-placeholder">
-                <span>Colorado Tech Hub</span>
-              </div>
-              <div class="sponsor-placeholder">
-                <span>Rocky Mountain Innovations</span>
+              <div class="sponsor-placeholder large">
+                <span>Your Company Here</span>
               </div>
             </div>
           </div>
 
           <div class="sponsor-tier">
-            <h3>Gold Sponsors</h3>
+            <h3>Innovation Partners</h3>
             <div class="sponsor-logos">
-              <div class="sponsor-placeholder">
-                <span>Trinidad Chamber</span>
+              <div class="sponsor-placeholder medium">
+                <span>Biomedica</span>
               </div>
-              <div class="sponsor-placeholder">
-                <span>Startup Colorado</span>
+              <div class="sponsor-logo-container medium">
+                <img src="/logos/csi-logo.png" alt="CSI" class="sponsor-logo" />
               </div>
-              <div class="sponsor-placeholder">
-                <span>Front Range Digital</span>
+              <div class="sponsor-logo-container medium">
+                <img src="/logos/creo-en-ti-logo.jpeg" alt="Creo En Ti" class="sponsor-logo" />
+              </div>
+            </div>
+          </div>
+
+          <div class="sponsor-tier">
+            <h3>Launch Partners</h3>
+            <div class="sponsor-logos">
+              <div class="sponsor-logo-container small">
+                <img src="/logos/InBank_landscape-1.svg" alt="InBank" class="sponsor-logo" />
               </div>
             </div>
           </div>
 
           <div class="sponsor-tier">
             <h3>Community Partners</h3>
+            <p class="tier-description">Supporting through in-kind donations, venue, food, and logistics</p>
             <div class="sponsor-logos">
-              <div class="sponsor-placeholder small">
-                <span>Emergent Campus</span>
+              <div class="sponsor-logo-container xsmall">
+                <img src="/logos/Emergent-Campus-Logo-Green.png" alt="Emergent Campus" class="sponsor-logo" />
               </div>
-              <div class="sponsor-placeholder small">
-                <span>Trinidad State College</span>
+              <div class="sponsor-logo-container xsmall">
+                <img src="/logos/Apotome Labs LOGO (2).svg" alt="Apotome Labs" class="sponsor-logo sponsor-logo-zoom" />
               </div>
-              <div class="sponsor-placeholder small">
-                <span>Apotome Labs</span>
+              <div class="sponsor-logo-container xsmall">
+                <img src="/logos/black-primary-crowdstrike-logo-1-addedPadding-3.svg" alt="CrowdStrike" class="sponsor-logo" />
               </div>
-              <div class="sponsor-placeholder small">
-                <span>InBank</span>
+              <div class="sponsor-logo-container xsmall">
+                <img src="/logos/trinidad-state-college.png" alt="Trinidad State College" class="sponsor-logo" />
               </div>
             </div>
           </div>
@@ -351,9 +358,17 @@ import GoogleMap from './GoogleMap.vue'
   font-size: 1.5rem;
   font-weight: 400;
   color: #86efac;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
   letter-spacing: -0.02em;
+}
+
+.tier-description {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #a3a3a3;
+  margin-bottom: 1.5rem;
+  font-style: italic;
 }
 
 .sponsor-logos {
@@ -364,34 +379,111 @@ import GoogleMap from './GoogleMap.vue'
   align-items: center;
 }
 
+.sponsor-logo-container {
+  background: #d1fae5;
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 2px;
+  padding: 2rem;
+  min-width: 240px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.sponsor-logo-container.large {
+  min-width: 280px;
+  height: 140px;
+  padding: 2.5rem;
+}
+
+.sponsor-logo-container.medium {
+  min-width: 200px;
+  height: 110px;
+  padding: 1.75rem;
+}
+
+.sponsor-logo-container.small {
+  min-width: 160px;
+  height: 90px;
+  padding: 1.5rem;
+}
+
+.sponsor-logo-container.xsmall {
+  min-width: 130px;
+  height: 70px;
+  padding: 1rem;
+}
+
+.sponsor-logo-container:hover {
+  border-color: #4ade80;
+  background: #a7f3d0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 222, 128, 0.2);
+}
+
+.sponsor-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.sponsor-logo-zoom {
+  transform: scale(2.5);
+}
+
 .sponsor-placeholder {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.05) 0%, rgba(34, 197, 94, 0.03) 100%);
+  background: #d1fae5;
   border: 1px solid rgba(74, 222, 128, 0.15);
   border-radius: 2px;
   padding: 2rem;
-  min-width: 200px;
-  height: 100px;
+  min-width: 240px;
+  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  color: #a3a3a3;
+  color: #065f46;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.sponsor-placeholder.large {
+  min-width: 280px;
+  height: 140px;
+  padding: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.sponsor-placeholder.medium {
+  min-width: 200px;
+  height: 110px;
+  padding: 1.75rem;
+  font-size: 1rem;
 }
 
 .sponsor-placeholder.small {
-  min-width: 150px;
-  height: 80px;
+  min-width: 160px;
+  height: 90px;
   padding: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+}
+
+.sponsor-placeholder.xsmall {
+  min-width: 130px;
+  height: 70px;
+  padding: 1rem;
+  font-size: 0.85rem;
 }
 
 .sponsor-placeholder:hover {
   border-color: #4ade80;
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
-  color: #f5f7f5;
+  background: #a7f3d0;
+  color: #064e3b;
   transform: translateY(-1px);
 }
 
@@ -471,17 +563,69 @@ import GoogleMap from './GoogleMap.vue'
     gap: 1rem;
   }
 
-  .sponsor-placeholder {
-    min-width: 140px;
-    height: 80px;
+  .sponsor-logo-container {
+    min-width: 180px;
+    height: 100px;
+    padding: 1.25rem;
+  }
+
+  .sponsor-logo-container.large {
+    min-width: 220px;
+    height: 110px;
+    padding: 1.5rem;
+  }
+
+  .sponsor-logo-container.medium {
+    min-width: 160px;
+    height: 90px;
+    padding: 1.25rem;
+  }
+
+  .sponsor-logo-container.small {
+    min-width: 130px;
+    height: 75px;
     padding: 1rem;
+  }
+
+  .sponsor-logo-container.xsmall {
+    min-width: 110px;
+    height: 60px;
+    padding: 0.75rem;
+  }
+
+  .sponsor-placeholder {
+    min-width: 180px;
+    height: 100px;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .sponsor-placeholder.large {
+    min-width: 220px;
+    height: 110px;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .sponsor-placeholder.medium {
+    min-width: 160px;
+    height: 90px;
+    padding: 1.25rem;
     font-size: 0.9rem;
   }
 
   .sponsor-placeholder.small {
-    min-width: 120px;
+    min-width: 130px;
+    height: 75px;
+    padding: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .sponsor-placeholder.xsmall {
+    min-width: 110px;
     height: 60px;
-    font-size: 0.8rem;
+    padding: 0.75rem;
+    font-size: 0.75rem;
   }
 }
 </style>
