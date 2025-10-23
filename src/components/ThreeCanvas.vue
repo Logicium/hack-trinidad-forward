@@ -430,13 +430,7 @@ const initGyroscope = async () => {
       pointer-events: none;
       font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Inter', system-ui, sans-serif;
     `
-    instruction.textContent = 'Tilt your device to explore the mountain!'
-    document.body.appendChild(instruction)
-    
-    // Remove instruction after 4 seconds
-    setTimeout(() => {
-      document.body.removeChild(instruction)
-    }, 4000)
+    // Instruction removed - no longer showing tilt message
   }
 }
 
