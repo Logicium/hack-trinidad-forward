@@ -159,6 +159,9 @@
               <div class="sponsor-logo-container small">
                 <img src="/logos/InBank_landscape-1.svg" alt="InBank" class="sponsor-logo" />
               </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/di_logo_light.png" alt="Disruptive Innovations" class="sponsor-logo sponsor-logo-invert" />
+              </div>
             </div>
           </div>
 
@@ -435,6 +438,10 @@ import GoogleMap from './GoogleMap.vue'
 }
 .sponsor-logo-zoom-sm {
   transform: scale(1.2);
+}
+
+.sponsor-logo-invert {
+  filter: invert(1);
 }
 
 .sponsor-placeholder {
