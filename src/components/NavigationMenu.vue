@@ -1,7 +1,7 @@
 <template>
   <nav class="floating-nav" :class="{ expanded: isExpanded }" @mouseenter="expand" @mouseleave="collapse">
     <div class="nav-content">
-      <button v-if="!isExpanded" class="nav-toggle" @click="expand">
+      <button v-if="!isExpanded" class="nav-toggle" @click="toggleMenu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
@@ -9,9 +9,9 @@
 
       <transition name="fade">
         <div v-if="isExpanded" class="nav-links">
-          <router-link to="/" class="nav-link" @click="collapse">Home</router-link>
-          <router-link to="/about" class="nav-link" @click="collapse">About</router-link>
-          <router-link to="/register" class="nav-link" @click="collapse">Register</router-link>
+          <router-link to="/" class="nav-link" @click="handleLinkClick">Home</router-link>
+          <router-link to="/about" class="nav-link" @click="handleLinkClick">About</router-link>
+          <router-link to="/register" class="nav-link" @click="handleLinkClick">Register</router-link>
         </div>
       </transition>
     </div>
@@ -22,6 +22,7 @@
 import { ref } from 'vue'
 
 const isExpanded = ref(false)
+const justOpened = ref(false)
 
 const expand = () => {
   isExpanded.value = true
@@ -29,6 +30,29 @@ const expand = () => {
 
 const collapse = () => {
   isExpanded.value = false
+  justOpened.value = false
+}
+
+const toggleMenu = () => {
+  isExpanded.value = true
+  justOpened.value = true
+  
+  // Clear the justOpened flag after a short delay
+  setTimeout(() => {
+    justOpened.value = false
+  }, 300)
+}
+
+const handleLinkClick = (event: Event) => {
+  // If the menu was just opened, prevent navigation and keep menu open
+  if (justOpened.value) {
+    event.preventDefault()
+    justOpened.value = false
+    return
+  }
+  
+  // Otherwise, allow navigation and collapse menu
+  collapse()
 }
 </script>
 
