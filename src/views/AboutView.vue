@@ -39,15 +39,17 @@
         <p class="section-subtitle">Partner with us to support innovation in Trinidad</p>
 
         <div class="tiers-grid">
-          <div class="tier-card catalyst">
+          <div class="tier-card keystone">
             <div class="tier-header">
-              <h3>Launch Partners</h3>
-              <p class="tier-amount">$100+</p>
+              <h3>Keystone Partners</h3>
+              <p class="tier-amount">$1000+</p>
             </div>
             <ul class="tier-benefits">
-              <li>Name on website and materials</li>
-              <li>Social media thank you</li>
-              <li>Community recognition</li>
+              <li>Prime logo placement on all materials</li>
+              <li>Speaking opportunity at opening ceremony</li>
+              <li>Booth space for recruiting/networking</li>
+              <li>Social media feature series</li>
+              <li>Access to participant résumés</li>
             </ul>
           </div>
 
@@ -64,17 +66,15 @@
             </ul>
           </div>
 
-          <div class="tier-card keystone">
+          <div class="tier-card catalyst">
             <div class="tier-header">
-              <h3>Keystone Partners</h3>
-              <p class="tier-amount">$1000+</p>
+              <h3>Launch Partners</h3>
+              <p class="tier-amount">$100+</p>
             </div>
             <ul class="tier-benefits">
-              <li>Prime logo placement on all materials</li>
-              <li>Speaking opportunity at opening ceremony</li>
-              <li>Booth space for recruiting/networking</li>
-              <li>Social media feature series</li>
-              <li>Access to participant résumés</li>
+              <li>Name on website and materials</li>
+              <li>Social media thank you</li>
+              <li>Community recognition</li>
             </ul>
           </div>
         </div>
