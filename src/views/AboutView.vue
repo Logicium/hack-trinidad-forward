@@ -204,6 +204,7 @@
                 </svg>
               </div>
               <h4>Best Design</h4>
+              <p class="category-amount">$100</p>
               <p>Most visually appealing and user-friendly interface</p>
             </div>
 
@@ -214,6 +215,7 @@
                 </svg>
               </div>
               <h4>Best Civic Impact</h4>
+              <p class="category-amount">$100</p>
               <p>Project with greatest potential community benefit</p>
             </div>
 
@@ -224,6 +226,7 @@
                 </svg>
               </div>
               <h4>Most Creative</h4>
+              <p class="category-amount">$100</p>
               <p>Most innovative and original solution</p>
             </div>
           </div>
@@ -1049,12 +1052,20 @@ onUnmounted(() => {
   font-size: 1.2rem;
   font-weight: 400;
   color: #f5f7f5;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.01em;
 }
 
+.category-amount {
+  font-size: 2rem !important;
+  font-weight: 400 !important;
+  color: #4ade80 !important;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
 .category-prize-card p {
-  color: #a3a3a3;
+  color: #d1d5db;
   font-size: 0.9rem;
   line-height: 1.5;
   font-weight: 300;
