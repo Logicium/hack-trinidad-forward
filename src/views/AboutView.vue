@@ -241,7 +241,7 @@
         <h2 class="section-title">Meet the Team</h2>
 
         <div class="people-category">
-          <h3 class="category-title">Event Organizer</h3>
+          <h3 class="category-title">Event Organizers</h3>
           <div class="people-grid">
             <div class="person-card">
               <div class="person-photo square">
@@ -250,12 +250,20 @@
               <h4>Kisora Thomas</h4>
               <p class="person-role">Event Manager, Owner at Apotome Labs</p>
             </div>
+
+            <div class="person-card">
+              <div class="person-photo square">
+                <span class="tba">Photo Coming Soon</span>
+              </div>
+              <h4>Joze Petrich</h4>
+              <p class="person-role">Event Coordinator, Business Development & Strategy, Emergent Campus</p>
+            </div>
           </div>
         </div>
 
         <div class="people-category">
           <h3 class="category-title">Judges</h3>
-          <div class="people-grid">
+          <div class="people-grid judges-grid">
             <div class="person-card">
               <div class="person-photo square">
                 <span class="tba">Photo Coming Soon</span>
@@ -269,7 +277,7 @@
                 <span class="tba">Photo Coming Soon</span>
               </div>
               <h4>Michael Archuleta</h4>
-              <p class="person-role">Creo En Ti Foundation, CIO Mt. San Rafael Hospital</p>
+              <p class="person-role">Owner at Archuleta Creo En Ti Foundation, CIO at Mt. San Rafael Hospital</p>
             </div>
 
             <div class="person-card">
@@ -280,15 +288,15 @@
               <p class="person-role">Director of Trinidad Trails Alliance</p>
             </div>
 
-            <div class="person-card">
+            <div class="person-card judges-bottom">
               <div class="person-photo square">
                 <span class="tba">Photo Coming Soon</span>
               </div>
               <h4>Veronica Maes</h4>
-              <p class="person-role">Communications and Community Relations Coordinator, City of Trinidad</p>
+              <p class="person-role">Communications & Community Relations Coordinator, City of Trinidad</p>
             </div>
 
-            <div class="person-card">
+            <div class="person-card judges-bottom">
               <div class="person-photo square">
                 <span class="tba">Photo Coming Soon</span>
               </div>
@@ -743,6 +751,25 @@ onUnmounted(() => {
   margin: 0 auto;
 }
 
+.judges-grid {
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 900px;
+}
+
+.judges-grid .person-card:nth-child(1),
+.judges-grid .person-card:nth-child(2),
+.judges-grid .person-card:nth-child(3) {
+  grid-column: span 2;
+}
+
+.judges-grid .person-card:nth-child(4) {
+  grid-column: 2 / 4;
+}
+
+.judges-grid .person-card:nth-child(5) {
+  grid-column: 4 / 6;
+}
+
 .person-card {
   text-align: center;
   transition: transform 0.3s ease;
@@ -834,6 +861,18 @@ onUnmounted(() => {
   .people-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+
+  .judges-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .judges-grid .person-card:nth-child(1),
+  .judges-grid .person-card:nth-child(2),
+  .judges-grid .person-card:nth-child(3),
+  .judges-grid .person-card:nth-child(4),
+  .judges-grid .person-card:nth-child(5) {
+    grid-column: auto;
   }
 
   .person-photo {
