@@ -248,7 +248,7 @@
           <div class="people-grid">
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">Photo Coming Soon</span>
+                <img src="/profiles/kisora.jpeg" alt="Kisora Thomas" />
               </div>
               <h4>Kisora Thomas</h4>
               <p class="person-role">Event Manager, Owner at Apotome Labs</p>
@@ -256,7 +256,7 @@
 
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">Photo Coming Soon</span>
+                <img src="/profiles/joze.jpeg" alt="Joze Petrich" />
               </div>
               <h4>Joze Petrich</h4>
               <p class="person-role">Event Coordinator, Business Development & Strategy, Emergent Campus</p>
@@ -269,7 +269,7 @@
           <div class="people-grid judges-grid">
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">Photo Coming Soon</span>
+                <img src="/profiles/christine.jpeg" alt="Christine Louden" />
               </div>
               <h4>Christine Louden</h4>
               <p class="person-role">Director of Emergent Campus</p>
@@ -277,7 +277,7 @@
 
             <div class="person-card">
               <div class="person-photo square">
-                <span class="tba">Photo Coming Soon</span>
+                <img src="/profiles/michael.jpeg" alt="Michael Archuleta" />
               </div>
               <h4>Michael Archuleta</h4>
               <p class="person-role">Owner at Archuleta Creo En Ti Foundation, CIO at Mt. San Rafael Hospital</p>
@@ -783,8 +783,8 @@ onUnmounted(() => {
 }
 
 .person-photo {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
@@ -792,10 +792,18 @@ onUnmounted(() => {
   background: linear-gradient(135deg, rgba(74, 222, 128, 0.1) 0%, rgba(34, 197, 94, 0.05) 100%);
   border: 2px solid rgba(74, 222, 128, 0.3);
   transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .person-photo.square {
   border-radius: 4px;
+}
+
+.person-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .person-card:hover .person-photo {
@@ -879,8 +887,8 @@ onUnmounted(() => {
   }
 
   .person-photo {
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
   }
 }
 

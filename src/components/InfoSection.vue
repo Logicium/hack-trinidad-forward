@@ -22,7 +22,7 @@
         <h2>Schedule</h2>
         <div class="schedule-grid">
           <div class="schedule-day">
-            <h3>Friday, Nov 14th</h3>
+            <h3>Friday, Nov 14th </h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">6:00 PM</span>
@@ -44,7 +44,7 @@
           </div>
 
           <div class="schedule-day">
-            <h3>Saturday, Nov 15th</h3>
+            <h3>Saturday, Nov 15th </h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">8:00 AM</span>
@@ -70,7 +70,7 @@
           </div>
 
           <div class="schedule-day">
-            <h3>Sunday, Nov 16th</h3>
+            <h3>Sunday, Nov 16th </h3>
             <div class="schedule-items">
               <div class="schedule-item">
                 <span class="time">8:00 AM</span>
