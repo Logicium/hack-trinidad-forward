@@ -280,7 +280,7 @@
                 <img src="/profiles/michael.jpeg" alt="Michael Archuleta" />
               </div>
               <h4>Michael Archuleta</h4>
-              <p class="person-role">Owner at Archuleta Creo En Ti Foundation, CIO at Mt. San Rafael Hospital</p>
+              <p class="person-role">Founder & Chair, Archuleta Creo En Ti Foundation | CIO, Mt. San Rafael Hospital</p>
             </div>
 
             <div class="person-card">
