@@ -351,12 +351,39 @@ const handleSubmit = async () => {
     ])
 
     isSubmitted.value = true
-
+// --- STEP 2: Call our NestJS backend (New code) ---
+    // If Airtable registration is successful, we trigger the email.
+    // We don't need to "await" this. We can let it run in the
+    // background so the user sees the success message faster.
+    triggerConfirmationEmail(formData.firstName, formData.email)
   } catch (error) {
     console.error('Error submitting to Airtable:', error)
     alert('There was an error submitting your registration. Please try again or contact us directly.')
   } finally {
     isSubmitting.value = false
+  }
+}
+// --- NEW Function ---
+// We'll create a new, separate function to call our backend
+// This keeps the code clean.
+async function triggerConfirmationEmail(name: string, email: string) {
+  // This is the URL of our NestJS backend endpoint
+  // Make sure to use your Vercel URL in production
+  const backendUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000'
+
+  try {
+    await fetch(`${backendUrl}/email/confirm-registration`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, email }),
+    })
+    console.log('Confirmation email request sent.')
+  } catch (error) {
+    // If this fails, we just log it.
+    // The user is already registered, so we don't need to show them an error.
+    console.error('Failed to send confirmation email:', error)
   }
 }
 </script>
