@@ -162,6 +162,9 @@
               <div class="sponsor-logo-container small">
                 <img src="/logos/di_logo_light.png" alt="Disruptive Innovations" class="sponsor-logo sponsor-logo-invert" />
               </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/gobins.png" alt="Gobins" class="sponsor-logo" />
+              </div>
             </div>
           </div>
 
@@ -180,6 +183,12 @@
               </div>
               <div class="sponsor-logo-container xsmall">
                 <img src="/logos/trinidad-state-college.png" alt="Trinidad State College" class="sponsor-logo" />
+              </div>
+              <div class="sponsor-logo-container xsmall">
+                <img src="/logos/cdwg-logo-no-tag.svg" alt="CDWG" class="sponsor-logo" />
+              </div>
+              <div class="sponsor-logo-container xsmall cyderes-container">
+                <img src="/logos/cyderes-logos.jpg" alt="Cyderes" class="sponsor-logo sponsor-logo-shrink" />
               </div>
             </div>
           </div>
@@ -438,6 +447,15 @@ import GoogleMap from './GoogleMap.vue'
 }
 .sponsor-logo-zoom-sm {
   transform: scale(1.2);
+}
+
+.sponsor-logo-shrink {
+  transform: scale(.9);
+}
+
+.cyderes-container {
+  min-width: 80px !important;
+  width: 120px;
 }
 
 .sponsor-logo-invert {
