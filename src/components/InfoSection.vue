@@ -168,6 +168,9 @@
               <div class="sponsor-logo-container small">
                 <img src="/logos/sanrafaelhospital-logo.png" alt="San Rafael Hospital" class="sponsor-logo sponsor-logo-zoom-md" />
               </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/way-out-west.webp" alt="Way Out West Coffee" class="sponsor-logo sponsor-logo-zoom" />
+              </div>
             </div>
           </div>
 
