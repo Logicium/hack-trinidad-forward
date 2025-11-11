@@ -132,8 +132,8 @@
           <div class="sponsor-tier">
             <h3>Keystone Partners</h3>
             <div class="sponsor-logos">
-              <div class="sponsor-placeholder large">
-                <span>Your Company Here</span>
+              <div class="sponsor-logo-container large">
+                <img src="/logos/creo-en-ti-logo.jpeg" alt="Creo En Ti" class="sponsor-logo sponsor-logo-zoom-sm" />
               </div>
             </div>
           </div>
@@ -146,9 +146,6 @@
               </div>
               <div class="sponsor-logo-container medium">
                 <img src="/logos/csi-logo.png" alt="CSI" class="sponsor-logo" />
-              </div>
-              <div class="sponsor-logo-container medium">
-                <img src="/logos/creo-en-ti-logo.jpeg" alt="Creo En Ti" class="sponsor-logo sponsor-logo-zoom-sm" />
               </div>
             </div>
           </div>
@@ -163,7 +160,13 @@
                 <img src="/logos/di_logo_light.png" alt="Disruptive Innovations" class="sponsor-logo sponsor-logo-invert" />
               </div>
               <div class="sponsor-logo-container small">
-                <img src="/logos/gobins.png" alt="Gobins" class="sponsor-logo" />
+                <img src="/logos/gobins.png" alt="Gobins" class="sponsor-logo sponsor-logo-zoom-md" />
+              </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/multicard.png" alt="Multicard" class="sponsor-logo" />
+              </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/sanrafaelhospital-logo.png" alt="San Rafael Hospital" class="sponsor-logo sponsor-logo-zoom-md" />
               </div>
             </div>
           </div>
@@ -445,6 +448,11 @@ import GoogleMap from './GoogleMap.vue'
 .sponsor-logo-zoom {
   transform: scale(2.5);
 }
+
+.sponsor-logo-zoom-md {
+  transform: scale(2);
+}
+
 .sponsor-logo-zoom-sm {
   transform: scale(1.2);
 }

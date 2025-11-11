@@ -265,6 +265,27 @@
         </div>
 
         <div class="people-category">
+          <h3 class="category-title">Speakers</h3>
+          <div class="people-grid">
+            <div class="person-card">
+              <div class="person-photo square">
+                <img src="/profiles/brad.jpeg" alt="Brad Rowland" />
+              </div>
+              <h4>Brad Rowland</h4>
+              <p class="person-role">Speaker</p>
+            </div>
+
+            <div class="person-card">
+              <div class="person-photo square">
+                <span class="tba">Photo Coming Soon</span>
+              </div>
+              <h4>Tasha Upchurch</h4>
+              <p class="person-role">Speaker</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="people-category">
           <h3 class="category-title">Judges</h3>
           <div class="people-grid judges-grid">
             <div class="person-card">
@@ -281,6 +302,14 @@
               </div>
               <h4>Michael Archuleta</h4>
               <p class="person-role">Founder & Chair, Archuleta Creo En Ti Foundation | CIO, Mt. San Rafael Hospital</p>
+            </div>
+
+            <div class="person-card">
+              <div class="person-photo square">
+                <img src="/profiles/epper.jpeg" alt="Rhonda Epper" />
+              </div>
+              <h4>Rhonda Epper</h4>
+              <p class="person-role">President, Trinidad State College</p>
             </div>
 
             <div class="person-card">
@@ -765,12 +794,10 @@ onUnmounted(() => {
   grid-column: span 2;
 }
 
-.judges-grid .person-card:nth-child(4) {
-  grid-column: 2 / 4;
-}
-
-.judges-grid .person-card:nth-child(5) {
-  grid-column: 4 / 6;
+.judges-grid .person-card:nth-child(4),
+.judges-grid .person-card:nth-child(5),
+.judges-grid .person-card:nth-child(6) {
+  grid-column: span 2;
 }
 
 .person-card {
