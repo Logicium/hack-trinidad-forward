@@ -59,7 +59,7 @@
                 <span class="event">Lunch & Mentor Sessions</span>
               </div>
               <div class="schedule-item">
-                <span class="time">3:00 PM</span>
+                <span class="time">2:00 PM</span>
                 <span class="event">Workshop: Why Your Future is Here</span>
               </div>
               <div class="schedule-item">
@@ -170,6 +170,9 @@
               </div>
               <div class="sponsor-logo-container small">
                 <img src="/logos/way-out-west.webp" alt="Way Out West Coffee" class="sponsor-logo sponsor-logo-zoom" />
+              </div>
+              <div class="sponsor-logo-container small">
+                <img src="/logos/ELLKAY_logo.webp" alt="Ellkay" class="sponsor-logo" />
               </div>
             </div>
           </div>
