@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { RouterView, useRoute } from 'vue-router'
 import NavigationMenu from './components/NavigationMenu.vue'
+import { computed } from 'vue'
+
+const route = useRoute()
+const showNav = computed(() => route.name !== 'sponsors')
 </script>
 
 <template>
   <div class="app">
-    <NavigationMenu />
+    <NavigationMenu v-if="showNav" />
     <RouterView />
   </div>
 </template>

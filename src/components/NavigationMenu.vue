@@ -12,6 +12,7 @@
           <router-link to="/" class="nav-link" @click="collapse">Home</router-link>
           <router-link to="/about" class="nav-link" @click="collapse">About</router-link>
           <router-link to="/register" class="nav-link" @click="collapse">Register</router-link>
+          <router-link to="/sponsors" class="nav-link" @click="collapse">Sponsors</router-link>
         </div>
       </transition>
     </div>
