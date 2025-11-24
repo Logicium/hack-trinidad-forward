@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from "@/views/AboutView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import SponsorsView from "@/views/SponsorsView.vue";
+import WinnersView from "@/views/WinnersView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/sponsors',
       name: 'sponsors',
       component: SponsorsView,
+    },
+    {
+      path: '/winners',
+      name: 'winners',
+      component: WinnersView,
     },
   ],
     scrollBehavior(to, from, savedPosition) {
